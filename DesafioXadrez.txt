@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    // Variável de controle para os loops
+    int i;
+
+    // Quantidade de casas que cada peça deve andar
+    int casasBispo = 5;
+    int casasTorre = 5;
+    int casasRainha = 8;
+
+    // Movimento do Bispo (anda em diagonal: cima + direita)
+    printf("Movimento do Bispo:\n");
+    for (i = 0; i < casasBispo; i++) {
+        printf("Cima\n");
+        printf("Direita\n");
+    }
+
+    // Movimento da Torre (anda apenas para a direita)
+    printf("\nMovimento da Torre:\n");
+    for (i = 0; i < casasTorre; i++) {
+        printf("Direita\n");
+    }
+
+    // Movimento da Rainha (anda para a esquerda)
+    printf("\nMovimento da Rainha:\n");
+    for (i = 0; i < casasRainha; i++) {
+        printf("Esquerda\n");
+    }
+
+    return 0; // Fim do programa
+}

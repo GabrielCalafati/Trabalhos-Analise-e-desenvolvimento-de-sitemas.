@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+#define TAM 10
+
+int main() {
+    int tabuleiro[TAM][TAM] = {0};
+
+    int tamanhoVertical = 4;
+    int tamanhoHorizontal = 3;
+
+    int xVertical = 2, yVertical = 1;
+    int xHorizontal = 5, yHorizontal = 4;
+
+    printf("Navio Vertical:\n");
+    for (int i = 0; i < tamanhoVertical; i++) {
+        int x = xVertical;
+        int y = yVertical + i;
+        tabuleiro[y][x] = 1;
+        printf("(%d, %d)\n", x, y);
+    }
+
+    printf("\nNavio Horizontal:\n");
+    for (int i = 0; i < tamanhoHorizontal; i++) {
+        int x = xHorizontal + i;
+        int y = yHorizontal;
+        tabuleiro[y][x] = 2;
+        printf("(%d, %d)\n", x, y);
+    }
+
+    printf("\nTabuleiro:\n");
+    for (int y = 0; y < TAM; y++) {
+        for (int x = 0; x < TAM; x++) {
+            printf("%d ", tabuleiro[y][x]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
